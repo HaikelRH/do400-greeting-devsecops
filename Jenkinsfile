@@ -21,7 +21,6 @@ pipeline {
             }
         }
 
-    }
 stage('Push to Quay') {
     steps {
         sh '''
@@ -30,7 +29,7 @@ stage('Push to Quay') {
         '''
     }
 }
-
+    }
     post {
         failure {
             withCredentials([usernamePassword(
